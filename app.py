@@ -29,5 +29,5 @@ def metrics_history():
     # return jsonify(metrics)
 
 if __name__ == '__main__':
-    init_db()#intilizing the Database
+    init_db()#initializing the Database
     app.run(debug=True)
