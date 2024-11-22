@@ -28,6 +28,12 @@ def metrics_history():
     return render_template('metrics.html', metrics=metrics)
     # return jsonify(metrics)
 
+
+@app.route('/metrics-json-history', methods=['GET'])
+def metrics_json_history():
+    metrics = get_metrics()
+    return jsonify(metrics)
+
 if __name__ == '__main__':
     init_db()#initializing the Database
     app.run(debug=True)
